@@ -33,6 +33,18 @@
     </div>
 </nav>
 
+@if(session()->has('success'))
+    <div class="container my-2">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
 @yield('content')
 
 <!-- Optional JavaScript -->
